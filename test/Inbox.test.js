@@ -34,4 +34,9 @@ describe('Inbox', () => {
     it('got deployed', () => {
         assert.ok(inbox.options.address);
     });
+
+    it('has default message', async () => {
+        const message = await inbox.methods.getMessage().call();
+        assert.equal(message, 'Hello, World!');
+    });
 });
