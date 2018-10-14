@@ -27,7 +27,7 @@ beforeEach(async () => {
 });
 
 describe('Inbox', () => {
-    it('Accounts', () => {
-        console.log(inbox);
+    it('got deployed', () => {
+        assert.ok(inbox.options.address);
     });
 });
